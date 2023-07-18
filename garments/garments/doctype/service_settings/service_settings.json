@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "creation": "2021-10-25 16:39:08.210092",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "stock_entry_receive_type",
+  "customer_stock_account",
+  "stock_entry_deliver_type",
+  "consumables_stock_entry_type",
+  "commission_payable_account",
+  "commission_expense_account"
+ ],
+ "fields": [
+  {
+   "fieldname": "stock_entry_receive_type",
+   "fieldtype": "Link",
+   "label": "Stock Entry Receive Type",
+   "options": "Stock Entry Type"
+  },
+  {
+   "fieldname": "customer_stock_account",
+   "fieldtype": "Link",
+   "label": "Customer Stock Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "stock_entry_deliver_type",
+   "fieldtype": "Link",
+   "label": "Stock Entry Deliver Type",
+   "options": "Stock Entry Type"
+  },
+  {
+   "fieldname": "consumables_stock_entry_type",
+   "fieldtype": "Link",
+   "label": "Consumables Stock Entry Type",
+   "options": "Stock Entry Type"
+  },
+  {
+   "fieldname": "commission_payable_account",
+   "fieldtype": "Link",
+   "label": "Commission Payable Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "commission_expense_account",
+   "fieldtype": "Link",
+   "label": "Commission Expense Account",
+   "options": "Account"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2021-10-28 19:51:24.652045",
+ "modified_by": "Administrator",
+ "module": "Garments",
+ "name": "Service Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

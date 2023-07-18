@@ -1,0 +1,566 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-01-09 20:01:19.010639",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "code",
+  "column_break_3",
+  "fabric",
+  "qty",
+  "section_break_5",
+  "gsm",
+  "column_break_7",
+  "constant",
+  "column_break_9",
+  "variant",
+  "section_break_11",
+  "body_length",
+  "chest_bust",
+  "body_gross",
+  "column_break_14",
+  "sleeve_length",
+  "sleeve_width",
+  "sleeve_gross",
+  "column_break_17",
+  "total_body_gross",
+  "section_break_21",
+  "rib",
+  "column_break_23",
+  "binding",
+  "column_break_25",
+  "master_gross",
+  "column_break_27",
+  "wastage_master",
+  "section_break_29",
+  "dia",
+  "panel_lengthdozen_inches",
+  "fabric_price_kg",
+  "yarn_per_kg",
+  "dyeing",
+  "knitting",
+  "rotery",
+  "pigment_garment_dye",
+  "column_break_38",
+  "total_fabric_cost",
+  "consumption",
+  "cut_to_pack",
+  "trims",
+  "thread",
+  "polybag",
+  "carton",
+  "finishing_trims",
+  "column_break_47",
+  "main_label",
+  "size_label",
+  "care_label",
+  "hang_tag",
+  "hanger",
+  "attach_loop",
+  "embalishment",
+  "print",
+  "embroidery",
+  "column_break_61",
+  "zip",
+  "lining",
+  "elastic",
+  "chord",
+  "piping",
+  "buttons",
+  "hangerloops",
+  "testing",
+  "sampling",
+  "entertainment",
+  "wastage",
+  "section_break_69",
+  "net_total",
+  "commision",
+  "column_break_72",
+  "total",
+  "per_piece_pkr",
+  "column_break_75",
+  "exr",
+  "per_piece_usd",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "G-KCS-.YY.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "G-KCS-.YY.-"
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "label": "Code"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fabric",
+   "fieldtype": "Data",
+   "label": "Fabric"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "gsm",
+   "fieldtype": "Float",
+   "label": "GSM "
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "constant",
+   "fieldtype": "Float",
+   "label": "Constant"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "variant",
+   "fieldtype": "Float",
+   "label": "Variant"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "body_length",
+   "fieldtype": "Float",
+   "label": "Body Length"
+  },
+  {
+   "default": "0",
+   "fieldname": "sleeve_length",
+   "fieldtype": "Float",
+   "label": "Sleeve Length"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "chest_bust",
+   "fieldtype": "Float",
+   "label": "Chest/Bust"
+  },
+  {
+   "default": "0",
+   "fieldname": "sleeve_width",
+   "fieldtype": "Float",
+   "label": "Sleeve Width"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "body_gross",
+   "fieldtype": "Float",
+   "label": "Body Gross",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "sleeve_gross",
+   "fieldtype": "Float",
+   "label": "Sleeve Gross",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_body_gross",
+   "fieldtype": "Float",
+   "label": "Total Body Gross",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "rib",
+   "fieldtype": "Float",
+   "label": "Rib"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "binding",
+   "fieldtype": "Float",
+   "label": "Binding"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "master_gross",
+   "fieldtype": "Float",
+   "label": "Grand Total/ Master Gross"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "wastage_master",
+   "fieldtype": "Float",
+   "label": "Wastage @ 15%"
+  },
+  {
+   "fieldname": "section_break_29",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "dia",
+   "fieldtype": "Float",
+   "label": "Dia "
+  },
+  {
+   "default": "0",
+   "fieldname": "panel_lengthdozen_inches",
+   "fieldtype": "Float",
+   "label": "Panel Length/ Dozen Inches"
+  },
+  {
+   "default": "0",
+   "fieldname": "fabric_price_kg",
+   "fieldtype": "Float",
+   "label": "Fabric Price/KG"
+  },
+  {
+   "default": "0",
+   "fieldname": "yarn_per_kg",
+   "fieldtype": "Float",
+   "label": "Yarn per kg "
+  },
+  {
+   "default": "0",
+   "fieldname": "dyeing",
+   "fieldtype": "Float",
+   "label": "Dyeing"
+  },
+  {
+   "default": "0",
+   "fieldname": "knitting",
+   "fieldtype": "Float",
+   "label": "Knitting"
+  },
+  {
+   "default": "0",
+   "fieldname": "rotery",
+   "fieldtype": "Float",
+   "label": "Rotery"
+  },
+  {
+   "default": "0",
+   "fieldname": "pigment_garment_dye",
+   "fieldtype": "Float",
+   "label": "Pigment/Garment Dye"
+  },
+  {
+   "fieldname": "column_break_38",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "consumption",
+   "fieldtype": "Float",
+   "label": "Consumption"
+  },
+  {
+   "default": "0",
+   "fieldname": "cut_to_pack",
+   "fieldtype": "Float",
+   "label": "Cut to Pack "
+  },
+  {
+   "default": "0",
+   "fieldname": "trims",
+   "fieldtype": "Float",
+   "label": "Trims"
+  },
+  {
+   "default": "0",
+   "fieldname": "thread",
+   "fieldtype": "Float",
+   "label": "Thread"
+  },
+  {
+   "default": "0",
+   "fieldname": "polybag",
+   "fieldtype": "Float",
+   "label": "Polybag "
+  },
+  {
+   "default": "0",
+   "fieldname": "carton",
+   "fieldtype": "Float",
+   "label": "Carton"
+  },
+  {
+   "default": "0",
+   "fieldname": "finishing_trims",
+   "fieldtype": "Float",
+   "label": "Finishing Trims"
+  },
+  {
+   "fieldname": "column_break_47",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "main_label",
+   "fieldtype": "Float",
+   "label": "Main Label"
+  },
+  {
+   "default": "0",
+   "fieldname": "size_label",
+   "fieldtype": "Float",
+   "label": "Size label "
+  },
+  {
+   "default": "0",
+   "fieldname": "care_label",
+   "fieldtype": "Float",
+   "label": "Care label"
+  },
+  {
+   "default": "0",
+   "fieldname": "hang_tag",
+   "fieldtype": "Float",
+   "label": "Hang Tag "
+  },
+  {
+   "default": "0",
+   "fieldname": "hanger",
+   "fieldtype": "Float",
+   "label": "Hanger"
+  },
+  {
+   "default": "0",
+   "fieldname": "attach_loop",
+   "fieldtype": "Float",
+   "label": "Attach Loop "
+  },
+  {
+   "default": "0",
+   "fieldname": "embalishment",
+   "fieldtype": "Float",
+   "label": "Embalishment"
+  },
+  {
+   "default": "0",
+   "fieldname": "print",
+   "fieldtype": "Float",
+   "label": "Print"
+  },
+  {
+   "default": "0",
+   "fieldname": "embroidery",
+   "fieldtype": "Float",
+   "label": "Embroidery"
+  },
+  {
+   "fieldname": "column_break_61",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "zip",
+   "fieldtype": "Float",
+   "label": "Zip"
+  },
+  {
+   "default": "0",
+   "fieldname": "lining",
+   "fieldtype": "Float",
+   "label": "Lining"
+  },
+  {
+   "default": "0",
+   "fieldname": "elastic",
+   "fieldtype": "Float",
+   "label": "Elastic"
+  },
+  {
+   "default": "0",
+   "fieldname": "chord",
+   "fieldtype": "Float",
+   "label": "Chord"
+  },
+  {
+   "default": "0",
+   "fieldname": "piping",
+   "fieldtype": "Float",
+   "label": "Piping"
+  },
+  {
+   "default": "0",
+   "fieldname": "buttons",
+   "fieldtype": "Float",
+   "label": "Buttons"
+  },
+  {
+   "default": "0",
+   "fieldname": "testing",
+   "fieldtype": "Float",
+   "label": "Testing"
+  },
+  {
+   "default": "0",
+   "fieldname": "sampling",
+   "fieldtype": "Float",
+   "label": "Sampling"
+  },
+  {
+   "default": "0",
+   "fieldname": "entertainment",
+   "fieldtype": "Float",
+   "label": "Entertainment"
+  },
+  {
+   "default": "0",
+   "fieldname": "wastage",
+   "fieldtype": "Float",
+   "label": "Wastage"
+  },
+  {
+   "fieldname": "section_break_69",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "net_total",
+   "fieldtype": "Float",
+   "label": "Net Total",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "commision",
+   "fieldtype": "Float",
+   "label": "Commision",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_72",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total",
+   "fieldtype": "Float",
+   "label": "Total",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "per_piece_pkr",
+   "fieldtype": "Float",
+   "label": "Per Piece / PKR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_75",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "per_piece_usd",
+   "fieldtype": "Float",
+   "label": "Per Piece / USD",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Knitting Costing Sheet",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_fabric_cost",
+   "fieldtype": "Float",
+   "label": "Total Fabric Cost"
+  },
+  {
+   "default": "1",
+   "fieldname": "exr",
+   "fieldtype": "Float",
+   "label": "EXR"
+  },
+  {
+   "default": "0",
+   "fieldname": "hangerloops",
+   "fieldtype": "Float",
+   "label": "HangerLoops"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-01-09 21:36:19.237952",
+ "modified_by": "Administrator",
+ "module": "Garments",
+ "name": "Knitting Costing Sheet",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

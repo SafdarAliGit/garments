@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-03-27 00:09:52.622421",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "fabric_type",
+  "column_break_3",
+  "width",
+  "length",
+  "column_break_6",
+  "gsm",
+  "no_of_pcs",
+  "total_fabric"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "default": "Body",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Body Parts",
+   "options": "Body\nSleeves\nHood\nInner\nPocket - front\nPocket - back\nPocket - side\nBelt\nLeg\nRib",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "default": "Open",
+   "fieldname": "fabric_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Fabric Form",
+   "options": "Open\nTubler",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "default": "0",
+   "fieldname": "width",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Lenght",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "default": "0",
+   "fieldname": "length",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Dia",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "gsm",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "GSM",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "default": "0",
+   "fieldname": "total_fabric",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Fabric + 17% Wastage (Yarn to cut to pack)",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "default": "12",
+   "fieldname": "no_of_pcs",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "No of Pcs"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-04-06 17:29:39.984692",
+ "modified_by": "Administrator",
+ "module": "Garments",
+ "name": "Master Knitting Costing Fabric",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

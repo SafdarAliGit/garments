@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-11-14 12:38:32.882571",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "towel_costing_sheet",
+  "width",
+  "length",
+  "qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "towel_costing_sheet",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Towel Costing Sheet",
+   "options": "Towel Costing Sheet",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "towel_costing_sheet.width",
+   "fieldname": "width",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Width",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "towel_costing_sheet.length",
+   "fieldname": "length",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Length",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "towel_costing_sheet.qty",
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-02-01 04:36:08.282852",
+ "modified_by": "Administrator",
+ "module": "Garments",
+ "name": "Master Towel Costing Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

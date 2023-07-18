@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-03-28 14:07:29.388425",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "black",
+  "gray_marl",
+  "purple",
+  "pink",
+  "red",
+  "green",
+  "blue"
+ ],
+ "fields": [
+  {
+   "fieldname": "black",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Black"
+  },
+  {
+   "fieldname": "gray_marl",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Gray Marl"
+  },
+  {
+   "fieldname": "purple",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Purple"
+  },
+  {
+   "fieldname": "pink",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Pink"
+  },
+  {
+   "fieldname": "red",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Red"
+  },
+  {
+   "fieldname": "green",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Green"
+  },
+  {
+   "fieldname": "blue",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Blue"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-03-28 14:07:29.388425",
+ "modified_by": "Administrator",
+ "module": "Garments",
+ "name": "Job Card Color",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

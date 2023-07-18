@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-12-30 12:50:20.828340",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "color",
+  "rate",
+  "ref_no",
+  "size",
+  "qty",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "label": "Color Name"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Float",
+   "label": "Rate per LBS"
+  },
+  {
+   "fieldname": "ref_no",
+   "fieldtype": "Data",
+   "label": "Ref no"
+  },
+  {
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "label": "Size"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Data",
+   "label": "Qty"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Data",
+   "label": "Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-02-01 04:06:42.220473",
+ "modified_by": "Administrator",
+ "module": "Garments",
+ "name": "Dyeing Program",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

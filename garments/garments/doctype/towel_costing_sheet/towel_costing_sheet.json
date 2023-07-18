@@ -1,0 +1,758 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "TCS-.######",
+ "creation": "2022-11-01 11:03:52.585968",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "job_no",
+  "master_towel_costing",
+  "customer",
+  "column_break_3",
+  "customer_order_no",
+  "customer_order_date",
+  "amended_from",
+  "article_details_section",
+  "article",
+  "width",
+  "length",
+  "column_break_11",
+  "gsm",
+  "qty",
+  "weight",
+  "column_break_15",
+  "total_weight",
+  "weight_with",
+  "towels_per_kg",
+  "raw_materials_section",
+  "materials",
+  "section_break_21",
+  "total_ratio",
+  "cb23",
+  "total_cost",
+  "wastage_section",
+  "wastage",
+  "wastage_cost",
+  "total_yarn_cost_wastage",
+  "column_break_38",
+  "weaving_oh",
+  "dyeing",
+  "dyed_fabric_cost_lbs",
+  "column_break_42",
+  "fc_rskg",
+  "cm_cost_section",
+  "stitching_cost_per_piece",
+  "accessories_per_piece",
+  "clearing_per_piece",
+  "container_freight_charges_per_piece",
+  "bank_oh_profit_per_piece",
+  "exchange_rate_per_piece",
+  "column_break_23",
+  "stitching_cost_per_kg",
+  "accessories_per_kg",
+  "stiching_wastage_section",
+  "stiching_wastage_perc",
+  "wastage_per_piece",
+  "wastage_per_kg",
+  "column_break_50",
+  "clearing_per_kg",
+  "container_freight_charges_per_kg",
+  "bank_oh_profit_per_kg",
+  "exchange_rate_per_kg",
+  "clearing_and_forwarding_charges_section",
+  "container_freight_usd",
+  "exchange_rate_for_cf",
+  "clearing_amount",
+  "container_clearing_amount_in_rs",
+  "total_cogs_per_kg",
+  "column_break_54",
+  "bank_oh_profit_perc",
+  "total_kgs_in_container",
+  "cnf_charges_per_kg",
+  "cnf_charges_per_piece",
+  "total_cogs_per_piece",
+  "column_break_56",
+  "exchange_rate_for_sale_price",
+  "final_cost_section",
+  "towel_cost_with_dyeing_price_per_piece",
+  "stitching_cost_price_per_piece",
+  "accessories_price_per_piece",
+  "b_wastage_price_per_piece",
+  "clearing_freight_price_per_piece",
+  "total_cogs_price_per_piece",
+  "bank_oh_profit_price_per_piece",
+  "total_price_in_pkr_price_per_piece",
+  "price_in_usd_price_per_piece",
+  "cb_column",
+  "towel_cost_with_dyeing_price_per_kg",
+  "stitching_cost_price_per_kg",
+  "accessories_price_per_kg",
+  "b_wastage_price_per_kg",
+  "clearing_freight_price_per_kg",
+  "total_cogs_price_per_kg",
+  "bank_oh_profit_price_per_kg",
+  "total_price_in_pkr_price_per_kg",
+  "price_in_usd_price_per_kg",
+  "total_cost_sb",
+  "yarn_cost_total",
+  "weaving_oh_cost_total",
+  "column_break_78",
+  "dyeing_cost_total",
+  "stitching_cost_total",
+  "column_break_81",
+  "accessories_cost_total",
+  "clearing_freight_total",
+  "column_break_84",
+  "grand_total_cost"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_no",
+   "fieldtype": "Link",
+   "label": "Job No",
+   "options": "Job No"
+  },
+  {
+   "fieldname": "master_towel_costing",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Master Towel Costing",
+   "options": "Master Towel Costing",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_order_no",
+   "fieldtype": "Data",
+   "label": "Customer Order No"
+  },
+  {
+   "fieldname": "customer_order_date",
+   "fieldtype": "Date",
+   "label": "Customer Order Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Towel Costing Sheet",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "article_details_section",
+   "fieldtype": "Section Break",
+   "label": "Article Details"
+  },
+  {
+   "fieldname": "article",
+   "fieldtype": "Data",
+   "label": "Article"
+  },
+  {
+   "default": "0",
+   "fieldname": "width",
+   "fieldtype": "Float",
+   "label": "Width"
+  },
+  {
+   "default": "0",
+   "fieldname": "length",
+   "fieldtype": "Float",
+   "label": "Length"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "gsm",
+   "fieldtype": "Float",
+   "label": "GSM"
+  },
+  {
+   "default": "0",
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "label": "Qty"
+  },
+  {
+   "default": "0",
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_weight",
+   "fieldtype": "Float",
+   "label": "Total Weight",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "weight_with",
+   "fieldtype": "Float",
+   "label": "Weight with Wastage",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "towels_per_kg",
+   "fieldtype": "Float",
+   "label": "Towels Per KG",
+   "read_only": 1
+  },
+  {
+   "fieldname": "raw_materials_section",
+   "fieldtype": "Section Break",
+   "label": "Raw Materials"
+  },
+  {
+   "fieldname": "materials",
+   "fieldtype": "Table",
+   "label": "Materials",
+   "options": "Towel Costing Sheet Raw Material"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_ratio",
+   "fieldtype": "Float",
+   "label": "Total Ratio",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_cost",
+   "fieldtype": "Float",
+   "label": "Total Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "wastage_section",
+   "fieldtype": "Section Break",
+   "label": "Wastage"
+  },
+  {
+   "default": "0",
+   "fieldname": "wastage",
+   "fieldtype": "Float",
+   "label": "Wastage %"
+  },
+  {
+   "default": "0",
+   "fieldname": "wastage_cost",
+   "fieldtype": "Float",
+   "label": "Wastage Cost",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_yarn_cost_wastage",
+   "fieldtype": "Float",
+   "label": "Total Yarn Cost + Wastage"
+  },
+  {
+   "fieldname": "column_break_38",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "weaving_oh",
+   "fieldtype": "Float",
+   "label": "Weaving OH"
+  },
+  {
+   "default": "0",
+   "fieldname": "dyeing",
+   "fieldtype": "Float",
+   "label": "Dyeing"
+  },
+  {
+   "default": "0",
+   "fieldname": "dyed_fabric_cost_lbs",
+   "fieldtype": "Float",
+   "label": "Dyed Fabric Cost /LBS",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_42",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fc_rskg",
+   "fieldtype": "Float",
+   "label": "FC (Rs/Kg)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cm_cost_section",
+   "fieldtype": "Section Break",
+   "label": "CM Cost"
+  },
+  {
+   "default": "0",
+   "fieldname": "stitching_cost_per_piece",
+   "fieldtype": "Float",
+   "label": "Stitching Cost Per Piece"
+  },
+  {
+   "default": "0",
+   "fieldname": "accessories_per_piece",
+   "fieldtype": "Float",
+   "label": "Accessories Per Piece"
+  },
+  {
+   "default": "0",
+   "fieldname": "clearing_per_piece",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Clearing Per Piece"
+  },
+  {
+   "default": "0",
+   "fieldname": "container_freight_charges_per_piece",
+   "fieldtype": "Float",
+   "label": "Container Freight Charges Per Piece"
+  },
+  {
+   "default": "0",
+   "fieldname": "bank_oh_profit_per_piece",
+   "fieldtype": "Float",
+   "label": "Bank OH Profit % Per Piece"
+  },
+  {
+   "default": "0",
+   "fieldname": "exchange_rate_per_piece",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Exchange Rate Per Piece"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "stitching_cost_per_kg",
+   "fieldtype": "Float",
+   "label": "Stitching Cost Per KG",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "accessories_per_kg",
+   "fieldtype": "Float",
+   "label": "Accessories Per KG",
+   "read_only": 1
+  },
+  {
+   "fieldname": "stiching_wastage_section",
+   "fieldtype": "Section Break",
+   "label": "Stiching Wastage"
+  },
+  {
+   "fieldname": "stiching_wastage_perc",
+   "fieldtype": "Percent",
+   "label": "Stiching Wastage %"
+  },
+  {
+   "default": "0",
+   "fieldname": "wastage_per_piece",
+   "fieldtype": "Float",
+   "label": "Stiching Wastage % Per Piece",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "wastage_per_kg",
+   "fieldtype": "Float",
+   "label": "Stiching Wastage % Per KG",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_50",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "clearing_per_kg",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Clearing Per KG"
+  },
+  {
+   "default": "0",
+   "fieldname": "container_freight_charges_per_kg",
+   "fieldtype": "Float",
+   "label": "Container Freight Charges Per KG"
+  },
+  {
+   "default": "0",
+   "fieldname": "bank_oh_profit_per_kg",
+   "fieldtype": "Float",
+   "label": "Bank OH Profit % Per KG"
+  },
+  {
+   "default": "0",
+   "fieldname": "exchange_rate_per_kg",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Exchange Rate Per KG"
+  },
+  {
+   "fieldname": "clearing_and_forwarding_charges_section",
+   "fieldtype": "Section Break",
+   "label": "Clearing and Forwarding Charges"
+  },
+  {
+   "fieldname": "container_freight_usd",
+   "fieldtype": "Currency",
+   "label": "Container Freight (USD)"
+  },
+  {
+   "fieldname": "exchange_rate_for_cf",
+   "fieldtype": "Float",
+   "label": "Exchange Rate for CF"
+  },
+  {
+   "fieldname": "clearing_amount",
+   "fieldtype": "Currency",
+   "label": "Clearing Amount"
+  },
+  {
+   "fieldname": "container_clearing_amount_in_rs",
+   "fieldtype": "Currency",
+   "label": "Container + clearing Amount in RS",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_cogs_per_kg",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Total COGS per KG"
+  },
+  {
+   "fieldname": "column_break_54",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_oh_profit_perc",
+   "fieldtype": "Percent",
+   "label": "Bank OH profit %"
+  },
+  {
+   "fieldname": "total_kgs_in_container",
+   "fieldtype": "Float",
+   "label": "Total KGs in Container"
+  },
+  {
+   "fieldname": "cnf_charges_per_kg",
+   "fieldtype": "Float",
+   "label": "CNF Charges per KG",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cnf_charges_per_piece",
+   "fieldtype": "Float",
+   "label": "CNF Charges per Piece",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_cogs_per_piece",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Total COGS per piece",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_56",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "exchange_rate_for_sale_price",
+   "fieldtype": "Float",
+   "label": "Exchange Rate for Sale Price"
+  },
+  {
+   "fieldname": "final_cost_section",
+   "fieldtype": "Section Break",
+   "label": "Final Cost"
+  },
+  {
+   "default": "0",
+   "fieldname": "towel_cost_with_dyeing_price_per_piece",
+   "fieldtype": "Float",
+   "label": "Towel Cost with Dyeing Price per Piece",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "stitching_cost_price_per_piece",
+   "fieldtype": "Float",
+   "label": "Stitching Cost Price per Piece",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "accessories_price_per_piece",
+   "fieldtype": "Float",
+   "label": "Accessories Price per Piece",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "b_wastage_price_per_piece",
+   "fieldtype": "Float",
+   "label": "B% +  Wastage Price per Piece",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "clearing_freight_price_per_piece",
+   "fieldtype": "Float",
+   "label": "Clearing + Freight Price per Piece",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_cogs_price_per_piece",
+   "fieldtype": "Float",
+   "label": "Total COGS Price per Piece",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "bank_oh_profit_price_per_piece",
+   "fieldtype": "Float",
+   "label": "Bank + OH + Profit Price per Piece",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_price_in_pkr_price_per_piece",
+   "fieldtype": "Float",
+   "label": "Total Price in PKR Price per Piece",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "price_in_usd_price_per_piece",
+   "fieldtype": "Float",
+   "label": "Price in USD Price per Piece",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "towel_cost_with_dyeing_price_per_kg",
+   "fieldtype": "Float",
+   "label": "Towel Cost with Dyeing Price per Kg",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "stitching_cost_price_per_kg",
+   "fieldtype": "Float",
+   "label": "Stitching Cost Price per Kg",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "accessories_price_per_kg",
+   "fieldtype": "Float",
+   "label": "Accessories Price per Kg",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "b_wastage_price_per_kg",
+   "fieldtype": "Float",
+   "label": "B% +  Wastage Price per Kg",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "clearing_freight_price_per_kg",
+   "fieldtype": "Float",
+   "label": "Clearing + Freight Price per Kg",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_cogs_price_per_kg",
+   "fieldtype": "Float",
+   "label": "Total COGS Price per Kg",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "bank_oh_profit_price_per_kg",
+   "fieldtype": "Float",
+   "label": "Bank + OH + Profit Price per Kg",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_price_in_pkr_price_per_kg",
+   "fieldtype": "Float",
+   "label": "Total Price in PKR Price per Kg",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "price_in_usd_price_per_kg",
+   "fieldtype": "Float",
+   "label": "Price in USD Price per Kg",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_cost_sb",
+   "fieldtype": "Section Break",
+   "label": "Total Cost"
+  },
+  {
+   "default": "0",
+   "fieldname": "yarn_cost_total",
+   "fieldtype": "Float",
+   "label": "Yarn Cost Total",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "weaving_oh_cost_total",
+   "fieldtype": "Float",
+   "label": "Weaving OH Cost Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_78",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "dyeing_cost_total",
+   "fieldtype": "Float",
+   "label": "Dyeing Cost Total",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "stitching_cost_total",
+   "fieldtype": "Float",
+   "label": "Stitching Cost Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_81",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "accessories_cost_total",
+   "fieldtype": "Float",
+   "label": "Accessories Cost Total",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "clearing_freight_total",
+   "fieldtype": "Float",
+   "label": "Clearing Freight Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_84",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "grand_total_cost",
+   "fieldtype": "Float",
+   "label": "Grand Total Cost",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-02-23 16:47:40.251648",
+ "modified_by": "Administrator",
+ "module": "Garments",
+ "name": "Towel Costing Sheet",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

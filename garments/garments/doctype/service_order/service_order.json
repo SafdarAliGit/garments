@@ -1,0 +1,237 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-10-24 14:06:19.700835",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "customer",
+  "column_break_2",
+  "transaction_date",
+  "amended_from",
+  "items_section",
+  "items",
+  "total_amount",
+  "sales_commission_details_section",
+  "sales_partner",
+  "column_break_11",
+  "commission_rate",
+  "commission_amount",
+  "customer_provided_items_section",
+  "accepted_warehouse",
+  "customer_items",
+  "section_break_12",
+  "received",
+  "column_break_12",
+  "delivered",
+  "column_break_14",
+  "processed",
+  "consumables_section",
+  "consumables_warehouse",
+  "consumables",
+  "back_processes_section",
+  "processes"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "items_section",
+   "fieldtype": "Section Break",
+   "label": "Items"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Service Order Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "consumables_warehouse",
+   "fieldtype": "Link",
+   "label": "Consumables Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "consumables_section",
+   "fieldtype": "Section Break",
+   "label": "Consumables"
+  },
+  {
+   "fieldname": "consumables",
+   "fieldtype": "Table",
+   "label": "Consumables",
+   "options": "Service Order Consumable"
+  },
+  {
+   "fieldname": "customer_provided_items_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Provided Items"
+  },
+  {
+   "fieldname": "accepted_warehouse",
+   "fieldtype": "Link",
+   "label": "Accepted Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "customer_items",
+   "fieldtype": "Table",
+   "label": "Customer Items",
+   "options": "Customer Provided Item"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Service Order",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "SO-.YY.-"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "received",
+   "fieldtype": "Percent",
+   "label": "% Received",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "delivered",
+   "fieldtype": "Percent",
+   "label": "% Delivered",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "processed",
+   "fieldtype": "Percent",
+   "label": "% Processed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "back_processes_section",
+   "fieldtype": "Section Break",
+   "label": "Back Processes"
+  },
+  {
+   "fieldname": "processes",
+   "fieldtype": "Table",
+   "label": "Processes",
+   "options": "Service Order Back Process"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sales_commission_details_section",
+   "fieldtype": "Section Break",
+   "label": "Sales Commission Details"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "commission_rate",
+   "fieldtype": "Float",
+   "label": "Commission Rate"
+  },
+  {
+   "default": "0",
+   "fieldname": "commission_amount",
+   "fieldtype": "Currency",
+   "label": "Commission Amount"
+  },
+  {
+   "fieldname": "sales_partner",
+   "fieldtype": "Link",
+   "label": "Sales Partner",
+   "options": "Supplier"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Transactions",
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "service_order"
+  }
+ ],
+ "modified": "2021-10-29 18:16:19.632035",
+ "modified_by": "Administrator",
+ "module": "Garments",
+ "name": "Service Order",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "customer",
+ "track_changes": 1
+}

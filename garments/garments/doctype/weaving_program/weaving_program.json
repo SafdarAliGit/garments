@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "autoname": "WPROG-.######",
+ "creation": "2022-12-27 16:14:16.782906",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "tcs_no",
+  "section_break_2",
+  "raw_material_section"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Serer",
+   "options": "WPROG-YY-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tcs_no",
+   "fieldtype": "Link",
+   "label": "TCS No",
+   "options": "Towel Costing Sheet"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "raw_material_section",
+   "fieldtype": "Section Break",
+   "label": "Raw Material",
+   "options": "Towel Costing Sheet"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Towel Costing Sheet",
+   "link_fieldname": "article"
+  }
+ ],
+ "modified": "2023-02-01 04:28:29.596245",
+ "modified_by": "Administrator",
+ "module": "Garments",
+ "name": "Weaving Program",
+ "name_case": "Title Case",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

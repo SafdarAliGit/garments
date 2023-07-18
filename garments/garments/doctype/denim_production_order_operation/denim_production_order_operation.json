@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-04-21 09:22:59.922124",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "denim_operation_type",
+  "source_warehouse",
+  "target_warehouse",
+  "operation_cost"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Source Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Target Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "denim_operation_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Denim Operation Type",
+   "options": "Denim Operation Type",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "operation_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Operation Cost",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-05-12 12:26:07.316613",
+ "modified_by": "Administrator",
+ "module": "Garments",
+ "name": "Denim Production Order Operation",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

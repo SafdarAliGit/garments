@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-04-21 12:44:19.314690",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "datetime",
+  "raw_material",
+  "consumed_qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Datetime",
+   "reqd": 1
+  },
+  {
+   "fieldname": "raw_material",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Raw Material",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "consumed_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Consumed Qty",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-05-06 20:23:03.423027",
+ "modified_by": "Administrator",
+ "module": "Garments",
+ "name": "Denim Operation Time Log",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

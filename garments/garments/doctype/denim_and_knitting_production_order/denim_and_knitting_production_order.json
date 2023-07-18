@@ -1,0 +1,243 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-04-21 13:03:05.413669",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "job_costing",
+  "style",
+  "column_break_5",
+  "transaction_date",
+  "qty",
+  "warehouse",
+  "raw_materials_section",
+  "materials",
+  "garment_operations_section",
+  "operations",
+  "cm_cost_section",
+  "special_process",
+  "cutting",
+  "column_break_16",
+  "stitching_charges",
+  "finishing",
+  "column_break_19",
+  "add",
+  "summary_section",
+  "job_costing_total_cost_in_pkr",
+  "total_raw_material_cost",
+  "column_break_24",
+  "total_operation_cost",
+  "total_cost_of_denim_production_order",
+  "column_break_27",
+  "difference",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "GM-DPO-.YY.-"
+  },
+  {
+   "fetch_from": "job_costing.style",
+   "fieldname": "style",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Style",
+   "options": "Item"
+  },
+  {
+   "fieldname": "job_costing",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job Costing",
+   "options": "Job Costing",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "raw_materials_section",
+   "fieldtype": "Section Break",
+   "label": "Raw Materials"
+  },
+  {
+   "fieldname": "materials",
+   "fieldtype": "Table",
+   "label": "Materials",
+   "options": "Denim Production Order Raw Material",
+   "reqd": 1
+  },
+  {
+   "fieldname": "garment_operations_section",
+   "fieldtype": "Section Break",
+   "label": "Garment Operations"
+  },
+  {
+   "fieldname": "operations",
+   "fieldtype": "Table",
+   "label": "Operations",
+   "options": "Denim Production Order Operation"
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary "
+  },
+  {
+   "default": "0",
+   "fetch_from": "job_costing.total_gross_making_cost",
+   "fieldname": "job_costing_total_cost_in_pkr",
+   "fieldtype": "Currency",
+   "label": "Job Costing Total Cost in PKR",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_raw_material_cost",
+   "fieldtype": "Currency",
+   "label": "Total Raw Material Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_operation_cost",
+   "fieldtype": "Currency",
+   "label": "Total Operation Cost",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_cost_of_denim_production_order",
+   "fieldtype": "Currency",
+   "label": "Total Cost of Denim Production Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "difference",
+   "fieldtype": "Currency",
+   "label": "Difference",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Denim and Knitting Production Order",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "job_costing.special_process",
+   "fieldname": "special_process",
+   "fieldtype": "Currency",
+   "label": "Special Process"
+  },
+  {
+   "default": "0",
+   "fetch_from": "job_costing.cutting",
+   "fieldname": "cutting",
+   "fieldtype": "Currency",
+   "label": "Cutting"
+  },
+  {
+   "default": "0",
+   "fetch_from": "job_costing.stitching_charges",
+   "fieldname": "stitching_charges",
+   "fieldtype": "Currency",
+   "label": "Stitching Charges"
+  },
+  {
+   "default": "0",
+   "fetch_from": "job_costing.finishing",
+   "fieldname": "finishing",
+   "fieldtype": "Currency",
+   "label": "Finishing"
+  },
+  {
+   "default": "0",
+   "fetch_from": "job_costing.add",
+   "fieldname": "add",
+   "fieldtype": "Currency",
+   "label": "Add"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cm_cost_section",
+   "fieldtype": "Section Break",
+   "label": "CM Cost"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-05-24 13:37:57.714180",
+ "modified_by": "Administrator",
+ "module": "Garments",
+ "name": "Denim and Knitting Production Order",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

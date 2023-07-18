@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:operation_type",
+ "creation": "2022-04-23 14:45:56.135323",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "operation_type",
+  "operation_expense_payable_account"
+ ],
+ "fields": [
+  {
+   "fieldname": "operation_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Operation Type",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "operation_expense_payable_account",
+   "fieldtype": "Link",
+   "label": "Operation Expense Payable Account",
+   "options": "Account",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-06-11 12:59:27.876463",
+ "modified_by": "Administrator",
+ "module": "Garments",
+ "name": "Denim Operation Type",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

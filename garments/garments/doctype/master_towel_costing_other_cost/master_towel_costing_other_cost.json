@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-11-26 12:07:48.602253",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "towel_costing_sheet",
+  "size",
+  "total_weight",
+  "weight_with_wastage",
+  "qty",
+  "qtykg",
+  "dying",
+  "weaving",
+  "stitching",
+  "accessories",
+  "wastage",
+  "clearing",
+  "bank"
+ ],
+ "fields": [
+  {
+   "fieldname": "towel_costing_sheet",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Towel Costing Sheet",
+   "options": "Towel Costing Sheet"
+  },
+  {
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Size",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "towel_costing_sheet.qty",
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "towel_costing_sheet.towels_per_kg",
+   "fieldname": "qtykg",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty/KG",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "towel_costing_sheet.dyeing",
+   "fieldname": "dying",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Dying",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "towel_costing_sheet.weaving_oh",
+   "fieldname": "weaving",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Weaving",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "towel_costing_sheet.price_in_usd_price_per_piece",
+   "fieldname": "stitching",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Stitching",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "towel_costing_sheet.accessories_per_piece",
+   "fieldname": "accessories",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Accessories",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "towel_costing_sheet.wastage_cost",
+   "fieldname": "wastage",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Wastage",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "towel_costing_sheet.clearing_per_piece",
+   "fieldname": "clearing",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Clearing",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "towel_costing_sheet.bank_oh_profit_price_per_piece",
+   "fieldname": "bank",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Bank",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "towel_costing_sheet.total_weight",
+   "fieldname": "total_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Weight",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "towel_costing_sheet.weight_with",
+   "fieldname": "weight_with_wastage",
+   "fieldtype": "Float",
+   "in_standard_filter": 1,
+   "label": "Weight With Wastage",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-02-23 13:01:18.459355",
+ "modified_by": "Administrator",
+ "module": "Garments",
+ "name": "Master Towel Costing Other Cost",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

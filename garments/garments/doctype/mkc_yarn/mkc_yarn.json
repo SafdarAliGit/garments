@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-03-30 14:45:20.652053",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "count",
+  "consumption",
+  "price",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "count",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Count"
+  },
+  {
+   "default": "0",
+   "fieldname": "consumption",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "% Consumption"
+  },
+  {
+   "default": "0",
+   "fieldname": "price",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Price"
+  },
+  {
+   "default": "0",
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-03-30 15:17:00.771468",
+ "modified_by": "Administrator",
+ "module": "Garments",
+ "name": "MKC Yarn",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

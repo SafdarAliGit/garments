@@ -1,0 +1,293 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-04-21 12:48:35.717547",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "source_warehouse",
+  "column_break_4",
+  "posting_date",
+  "denim_operation_type",
+  "qty",
+  "job_costing",
+  "section_break_9",
+  "finished_item",
+  "uom",
+  "column_break_11",
+  "finished_qty",
+  "column_break_13",
+  "target_warehouse",
+  "raw_materials_section",
+  "materials",
+  "expenses_section",
+  "expenses",
+  "other_expenses_section",
+  "special_process",
+  "cutting",
+  "column_break_23",
+  "stitching_charges",
+  "finishing",
+  "column_break_26",
+  "add",
+  "summary_section",
+  "total_raw_material_cost",
+  "total_expenses",
+  "column_break_20",
+  "total_cost",
+  "total_cost_per_piece",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "GM-DO-.YY.-"
+  },
+  {
+   "fieldname": "source_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Source Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "denim_and_knitting_production_order.job_costing",
+   "fieldname": "job_costing",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job Costing",
+   "options": "Job Costing"
+  },
+  {
+   "fieldname": "raw_materials_section",
+   "fieldtype": "Section Break",
+   "label": "Raw Materials"
+  },
+  {
+   "fieldname": "materials",
+   "fieldtype": "Table",
+   "label": "Materials",
+   "options": "Denim Operation Raw Material"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Finished Item Details"
+  },
+  {
+   "fieldname": "finished_item",
+   "fieldtype": "Link",
+   "label": "Finished Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "finished_qty",
+   "fieldtype": "Float",
+   "label": "Finished Qty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_warehouse",
+   "fieldtype": "Link",
+   "label": "Target Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expenses_section",
+   "fieldtype": "Section Break",
+   "label": "Expenses"
+  },
+  {
+   "fieldname": "expenses",
+   "fieldtype": "Table",
+   "label": "Expenses",
+   "options": "Denim Operation Expense"
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_raw_material_cost",
+   "fieldtype": "Currency",
+   "label": "Total Raw Material Cost",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_expenses",
+   "fieldtype": "Currency",
+   "label": "Total Expenses",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_cost_per_piece",
+   "fieldtype": "Currency",
+   "label": "Total Cost per Piece",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Denim Operation",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "denim_operation_type",
+   "fieldtype": "Link",
+   "label": "Denim Operation Type",
+   "options": "Denim Operation Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fetch_from": "denim_and_knitting_production_order.qty",
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "label": "Qty to Manufacture",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "finished_item.stock_uom",
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "Job Costing",
+   "fieldname": "other_expenses_section",
+   "fieldtype": "Section Break",
+   "label": "Other Expenses"
+  },
+  {
+   "default": "0",
+   "fieldname": "special_process",
+   "fieldtype": "Currency",
+   "label": "Special Process"
+  },
+  {
+   "default": "0",
+   "fieldname": "cutting",
+   "fieldtype": "Currency",
+   "label": "Cutting"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "stitching_charges",
+   "fieldtype": "Currency",
+   "label": "Stitching Charges"
+  },
+  {
+   "default": "0",
+   "fieldname": "finishing",
+   "fieldtype": "Currency",
+   "label": "Finishing"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "add",
+   "fieldtype": "Currency",
+   "label": "Add"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "denim_operation"
+  },
+  {
+   "link_doctype": "Journal Entry",
+   "link_fieldname": "denim_operation"
+  }
+ ],
+ "modified": "2022-06-11 12:58:25.805721",
+ "modified_by": "Administrator",
+ "module": "Garments",
+ "name": "Denim Operation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

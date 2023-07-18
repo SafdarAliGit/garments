@@ -1,0 +1,458 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-02-15 20:26:21.366916",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "fabric",
+  "column_break_3",
+  "qty",
+  "qty_in_dzn",
+  "yarn_details_section",
+  "yarns",
+  "total_yarn_amount",
+  "section_break_8",
+  "yarn_per_kg",
+  "knitting_cost",
+  "column_break_11",
+  "dying_cost",
+  "rortary",
+  "cb13",
+  "fabric_price",
+  "fabrics_section",
+  "fabrics",
+  "total_fabric",
+  "amended_from",
+  "section_break_23",
+  "cof_qty",
+  "ctp_qty",
+  "oh_qty",
+  "p_qty",
+  "emb_qty",
+  "st_qty",
+  "ft_qty",
+  "c_qty",
+  "e_qty",
+  "column_break_33",
+  "cof_rate",
+  "ctp_rate",
+  "oh_rate",
+  "p_rate",
+  "emb_rate",
+  "st_rate",
+  "ft_rate",
+  "c_rate",
+  "e_rate",
+  "column_break_43",
+  "cof_amount",
+  "ctp_amount",
+  "oh_amount",
+  "p_amount",
+  "emb_amount",
+  "st_amount",
+  "ft_amount",
+  "c_amount",
+  "e_amount",
+  "summary_section",
+  "per_piece_amount",
+  "column_break_12",
+  "total_cost",
+  "section_break_55",
+  "exchange_rate",
+  "column_break_57",
+  "per_piece_amount_in_usd",
+  "column_break_59",
+  "total_cost_in_usd"
+ ],
+ "fields": [
+  {
+   "default": "G-MKC-.YY.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "G-MKC-.YY.-"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fabric",
+   "fieldtype": "Data",
+   "label": "Fabric"
+  },
+  {
+   "default": "1",
+   "fetch_from": "knitting_costing_sheet.qty",
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "fabric_price",
+   "fieldtype": "Float",
+   "label": "Fabric Price / Kg",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fabrics_section",
+   "fieldtype": "Section Break",
+   "label": "Fabrics"
+  },
+  {
+   "fieldname": "fabrics",
+   "fieldtype": "Table",
+   "label": "Fabrics",
+   "options": "Master Knitting Costing Fabric"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Master Knitting Costing",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_fabric",
+   "fieldtype": "Float",
+   "label": "Total Fabric",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "yarn_details_section",
+   "fieldtype": "Section Break",
+   "label": "Yarn Details"
+  },
+  {
+   "fieldname": "yarns",
+   "fieldtype": "Table",
+   "label": "Yarns",
+   "options": "MKC Yarn"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yarn_per_kg",
+   "fieldtype": "Float",
+   "label": "Yarn per Kg",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "knitting_cost",
+   "fieldtype": "Float",
+   "label": "Knitting Cost"
+  },
+  {
+   "default": "0",
+   "fieldname": "dying_cost",
+   "fieldtype": "Float",
+   "label": "Dying Cost"
+  },
+  {
+   "default": "0",
+   "fieldname": "rortary",
+   "fieldtype": "Float",
+   "label": "Rortary"
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "cof_qty",
+   "fieldtype": "Float",
+   "label": "Consumption of Fabric Qty"
+  },
+  {
+   "default": "0",
+   "fieldname": "ctp_qty",
+   "fieldtype": "Float",
+   "label": "Cut to Pack Qty"
+  },
+  {
+   "default": "0",
+   "fieldname": "oh_qty",
+   "fieldtype": "Float",
+   "label": "O Head Qty"
+  },
+  {
+   "default": "0",
+   "fieldname": "p_qty",
+   "fieldtype": "Float",
+   "label": "Print Qty"
+  },
+  {
+   "default": "0",
+   "fieldname": "emb_qty",
+   "fieldtype": "Float",
+   "label": "Embiodary Qty"
+  },
+  {
+   "default": "0",
+   "fieldname": "st_qty",
+   "fieldtype": "Float",
+   "label": "Stitching Trims Qty"
+  },
+  {
+   "default": "0",
+   "fieldname": "ft_qty",
+   "fieldtype": "Float",
+   "label": "Finishing Trims Qty"
+  },
+  {
+   "default": "0",
+   "fieldname": "c_qty",
+   "fieldtype": "Float",
+   "label": "Commission Qty"
+  },
+  {
+   "default": "0",
+   "fieldname": "e_qty",
+   "fieldtype": "Float",
+   "label": "Entertainment Qty"
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "cof_rate",
+   "fieldtype": "Float",
+   "label": "Rate",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "ctp_rate",
+   "fieldtype": "Float",
+   "label": "Rate"
+  },
+  {
+   "default": "0",
+   "fieldname": "oh_rate",
+   "fieldtype": "Float",
+   "label": "Rate"
+  },
+  {
+   "default": "0",
+   "fieldname": "p_rate",
+   "fieldtype": "Float",
+   "label": "Rate"
+  },
+  {
+   "default": "0",
+   "fieldname": "emb_rate",
+   "fieldtype": "Float",
+   "label": "Rate"
+  },
+  {
+   "default": "0",
+   "fieldname": "st_rate",
+   "fieldtype": "Float",
+   "label": "Rate"
+  },
+  {
+   "default": "0",
+   "fieldname": "ft_rate",
+   "fieldtype": "Float",
+   "label": "Rate"
+  },
+  {
+   "default": "0",
+   "fieldname": "c_rate",
+   "fieldtype": "Float",
+   "label": "Rate"
+  },
+  {
+   "default": "0",
+   "fieldname": "e_rate",
+   "fieldtype": "Float",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "column_break_43",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "cof_amount",
+   "fieldtype": "Float",
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "ctp_amount",
+   "fieldtype": "Float",
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "oh_amount",
+   "fieldtype": "Float",
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "p_amount",
+   "fieldtype": "Float",
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "emb_amount",
+   "fieldtype": "Float",
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "st_amount",
+   "fieldtype": "Float",
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "ft_amount",
+   "fieldtype": "Float",
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "c_amount",
+   "fieldtype": "Float",
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "e_amount",
+   "fieldtype": "Float",
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_yarn_amount",
+   "fieldtype": "Float",
+   "label": "Total Yarn Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_cost",
+   "fieldtype": "Float",
+   "label": "Total Cost",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "per_piece_amount",
+   "fieldtype": "Float",
+   "label": "Per Piece Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "qty_in_dzn",
+   "fieldtype": "Float",
+   "label": "Qty in Dzn",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_55",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "exchange_rate",
+   "fieldtype": "Float",
+   "label": "Exchange Rate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_57",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "per_piece_amount_in_usd",
+   "fieldtype": "Float",
+   "label": "Per Piece Amount in USD",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_59",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_cost_in_usd",
+   "fieldtype": "Float",
+   "label": "Total Cost in USD",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-04-07 16:33:25.611575",
+ "modified_by": "Administrator",
+ "module": "Garments",
+ "name": "Master Knitting Costing",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
