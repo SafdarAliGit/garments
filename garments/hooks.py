@@ -103,6 +103,9 @@ doc_events = {
 	},
 	"Subcontracting Order": {
 		"validate": "garments.events.subcontracting_order.calculate_total_reqiured_qty_and_no_bags"
+	},
+	"Subcontracting Receipt": {
+		"on_submit": "garments.events.update_sco_itemes.on_submit"
 	}
 }
 
