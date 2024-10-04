@@ -1,6 +1,6 @@
 {
  "actions": [],
- "creation": "2024-09-30 20:08:57.561392",
+ "creation": "2024-10-01 19:07:12.313609",
  "default_view": "List",
  "doctype": "DocType",
  "document_type": "Document",
@@ -20,7 +20,9 @@
   "purchase_receipt_item",
   "accounting_dimensions_section",
   "cost_center",
-  "dimension_col_break"
+  "dimension_col_break",
+  "warehouse",
+  "receipt_child_id"
  ],
  "fields": [
   {
@@ -46,11 +48,12 @@
    "width": "120px"
   },
   {
+   "default": "Subcontracting Receipt",
    "fieldname": "receipt_document_type",
    "fieldtype": "Select",
    "label": "Receipt Document Type",
    "no_copy": 1,
-   "options": "Purchase Invoice\nPurchase Receipt",
+   "options": "Subcontracting Receipt",
    "print_hide": 1,
    "read_only": 1
   },
@@ -107,7 +110,7 @@
    "in_list_view": 1,
    "label": "Applicable Charges",
    "options": "Company:company:default_currency",
-   "read_only_depends_on": "eval:parent.distribute_charges_based_on != 'Distribute Manually'"
+   "read_only_depends_on": "// eval:parent.distribute_charges_based_on != 'Distribute Manually'"
   },
   {
    "fieldname": "purchase_receipt_item",
@@ -132,14 +135,26 @@
   {
    "fieldname": "dimension_col_break",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "receipt_child_id",
+   "fieldtype": "Data",
+   "label": "Receipt Child ID",
+   "read_only": 1
   }
  ],
  "istable": 1,
  "links": [],
- "modified": "2024-09-30 20:08:57.561392",
+ "modified": "2024-10-03 20:34:36.158682",
  "modified_by": "Administrator",
  "module": "Garments",
- "name": "Landed Cost Item Adjustment",
+ "name": "Subcontracting Item Adjustment",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

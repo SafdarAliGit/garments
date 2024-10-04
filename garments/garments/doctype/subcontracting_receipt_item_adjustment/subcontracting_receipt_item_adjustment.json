@@ -1,6 +1,6 @@
 {
  "actions": [],
- "creation": "2024-09-30 20:05:52.606454",
+ "creation": "2024-10-01 16:42:25.150969",
  "default_view": "List",
  "doctype": "DocType",
  "document_type": "Document",
@@ -16,11 +16,12 @@
  ],
  "fields": [
   {
+   "default": "Subcontracting Receipt",
    "fieldname": "receipt_document_type",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Receipt Document Type",
-   "options": "\nPurchase Invoice\nPurchase Receipt",
+   "options": "\nSubcontracting Receipt",
    "reqd": 1
   },
   {
@@ -64,10 +65,10 @@
  ],
  "istable": 1,
  "links": [],
- "modified": "2024-09-30 20:05:52.606454",
+ "modified": "2024-10-02 21:43:55.154189",
  "modified_by": "Administrator",
  "module": "Garments",
- "name": "Landed Cost Purchase Receipt Adjustment",
+ "name": "Subcontracting Receipt Item Adjustment",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",
