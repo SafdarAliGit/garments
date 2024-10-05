@@ -69,7 +69,7 @@ class SubcontractingValueAdjustment(Document):
                 "incoming_rate": item.rate + item.applicable_charges / item.qty,
                 "company": self.company,
                 "stock_value_difference": item.amount + item.applicable_charges,
-                "qty_after_transaction": get_latest_stock_qty(item.item_code, item.warehouse) + item.qty,
+                "qty_after_transaction": get_latest_stock_qty(item.item_code, item.warehouse),
                 "stock_value":item.amount + item.applicable_charges + sle.stock_value_difference
             })
             sle_positive.insert(ignore_permissions=True)
