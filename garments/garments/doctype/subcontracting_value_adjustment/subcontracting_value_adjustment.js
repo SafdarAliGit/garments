@@ -84,6 +84,19 @@ frappe.ui.form.on('Subcontracting Receipt Item Adjustment', {
 frappe.ui.form.on('Subcontracting Taxes and Charges Adjustment', {
     amount: function (frm, cdt, cdn) {
         set_total_taxes_and_charges(frm);
+        let row = locals[cdt][cdn];
+        let total_qty = frm.doc.total_qty;
+        let total_taxes_and_charges = frm.doc.total_taxes_and_charges;
+        let unit_applicable_charges = 0;
+        if (total_qty > 0 && total_taxes_and_charges > 0) {
+            unit_applicable_charges = total_taxes_and_charges / total_qty;
+
+            $.each(frm.doc.items || [], function (i, d) {
+                calculate_applicable_charges(d, unit_applicable_charges);
+            });
+
+
+        }
     }
 });
 
@@ -113,4 +126,12 @@ function get_scr_names(frm) {
             scr_names.push(row.receipt_document);
         }
     });
+}
+
+function calculate_applicable_charges(row, unit_applicable_charges) {
+    if (row.qty) {
+        let ac = row.qty * unit_applicable_charges;
+        // Refresh the field to update the UI
+        frappe.model.set_value(row.doctype, row.name, 'applicable_charges', ac);
+    }
 }
