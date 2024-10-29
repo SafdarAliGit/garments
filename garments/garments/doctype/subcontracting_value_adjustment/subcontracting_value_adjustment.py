@@ -8,6 +8,7 @@ class SubcontractingValueAdjustment(Document):
 
     def on_submit(self):
         self.pass_stock_ledger_entries()
+        self.pass_gl_entries()
 
     def pass_stock_ledger_entries(self):
         current_date = frappe.utils.nowdate()  # Get current date
@@ -93,3 +94,42 @@ class SubcontractingValueAdjustment(Document):
             except Exception as e:
                 frappe.log_error(f"Error creating Stock Ledger Entries for item {item.item_code}: {str(e)}")
                 frappe.throw("Error while processing stock ledger entries.")
+
+    def pass_gl_entries(self):
+        current_date = frappe.utils.nowdate()  # Get current date
+        current_time = frappe.utils.nowtime()  # Get current time
+        company = frappe.defaults.get_defaults().get("company")
+
+        for item in self.taxes:
+            try:
+                gle_credit = frappe.new_doc("GL Entry")
+                gle_credit.posting_date = current_date
+                gle_credit.account = item.expense_account
+                gle_credit.cost_center = frappe.get_cached_value("Company", company, "cost_center")
+                gle_credit.debit = 0
+                gle_credit.debit_in_account_currency = 0
+                gle_credit.credit = item.amount
+                gle_credit.credit_in_account_currency = item.amount
+                gle_credit.against = 'Stock In Hand - MTI&E'
+                gle_credit.voucher_type = 'Subcontracting Value Adjustment'
+                gle_credit.voucher_no = item.parent
+                gle_credit.company = company
+
+                gle_debit = frappe.new_doc("GL Entry")
+                gle_debit.posting_date = current_date
+                gle_debit.account = 'Stock In Hand - MTI&E'
+                gle_debit.cost_center = frappe.get_cached_value("Company", company, "cost_center")
+                gle_debit.credit = 0
+                gle_debit.credit_in_account_currency = 0
+                gle_debit.debit = item.amount
+                gle_debit.debit_in_account_currency = item.amount
+                gle_debit.against = item.expense_account
+                gle_debit.voucher_type = 'Subcontracting Value Adjustment'
+                gle_debit.voucher_no = item.parent
+                gle_debit.company = company
+
+                gle_credit.save()
+                gle_debit.save()
+
+            except Exception as e:
+                frappe.throw(str(e))
