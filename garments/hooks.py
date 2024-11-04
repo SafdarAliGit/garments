@@ -76,13 +76,15 @@ app_license = "MIT"
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
+doctype_js = {"Subcontracting Receipt": "public/js/subcontracting_receipt.js",
+              }
 
 # DocType Class
 # ---------------
 # Override standard doctype classes
 
 override_doctype_class = {
-	"Subcontracting Order": "garments.overrides.OverriddenSubcontractingOrder"
+    "Subcontracting Order": "garments.overrides.OverriddenSubcontractingOrder"
 }
 
 # Document Events
@@ -90,23 +92,23 @@ override_doctype_class = {
 # Hook on document methods and events
 
 doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	},
-	"Purchase Order":{
-		"before_submit": "garments.events.purchase_order.validate"
-	},
-	"BOM": {
-		"validate": "garments.events.bom.bom_validation_for_percentage_fields"
-	},
-	"Subcontracting Order": {
-		"validate": "garments.events.subcontracting_order.calculate_total_reqiured_qty_and_no_bags"
-	},
-	"Subcontracting Receipt": {
-		"on_submit": "garments.events.update_sco_itemes.on_submit"
-	}
+    # 	"*": {
+    # 		"on_update": "method",
+    # 		"on_cancel": "method",
+    # 		"on_trash": "method"
+    #	},
+    "Purchase Order": {
+        "before_submit": "garments.events.purchase_order.validate"
+    },
+    "BOM": {
+        "validate": "garments.events.bom.bom_validation_for_percentage_fields"
+    },
+    "Subcontracting Order": {
+        "validate": "garments.events.subcontracting_order.calculate_total_reqiured_qty_and_no_bags"
+    },
+    "Subcontracting Receipt": {
+        "on_submit": "garments.events.update_sco_itemes.on_submit"
+    }
 }
 
 # Scheduled Tasks
@@ -158,24 +160,24 @@ doc_events = {
 # --------------------
 
 user_data_fields = [
-	{
-		"doctype": "{doctype_1}",
-		"filter_by": "{filter_by}",
-		"redact_fields": ["{field_1}", "{field_2}"],
-		"partial": 1,
-	},
-	{
-		"doctype": "{doctype_2}",
-		"filter_by": "{filter_by}",
-		"partial": 1,
-	},
-	{
-		"doctype": "{doctype_3}",
-		"strict": False,
-	},
-	{
-		"doctype": "{doctype_4}"
-	}
+    {
+        "doctype": "{doctype_1}",
+        "filter_by": "{filter_by}",
+        "redact_fields": ["{field_1}", "{field_2}"],
+        "partial": 1,
+    },
+    {
+        "doctype": "{doctype_2}",
+        "filter_by": "{filter_by}",
+        "partial": 1,
+    },
+    {
+        "doctype": "{doctype_3}",
+        "strict": False,
+    },
+    {
+        "doctype": "{doctype_4}"
+    }
 ]
 
 # Authentication and authorization
@@ -184,4 +186,3 @@ user_data_fields = [
 # auth_hooks = [
 # 	"garments.auth.validate"
 # ]
-
