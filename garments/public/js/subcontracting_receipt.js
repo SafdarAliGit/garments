@@ -1,20 +1,21 @@
 frappe.ui.form.on("Subcontracting Receipt", {
     refresh: function (frm) {
         if (!frm.doc.__islocal && frm.doc.docstatus == 1) { // Only show the button if the document is submitted
-            frm.add_custom_button(__('Create Purchase Invoice'), function () {
-                create_purchase_invoice(frm);
+            frm.add_custom_button(__('Create Purchase Receipt'), function () {
+                create_purchase_receipt(frm);
             }, __('Create'));
         }
     }
 
 });
 
-function create_purchase_invoice(frm) {
+function create_purchase_receipt(frm) {
     // Retrieve values
     let subcontracting_order = frm.doc.items[0].subcontracting_order;
     let master_towel_costing = frm.doc.master_towel_costing;
     let supplier = frm.doc.supplier;
     let qty = frm.doc.items[0].qty;
+    let scr = frm.doc.name;
 
     // Check if any argument is missing
     let missing_fields = [];
@@ -22,6 +23,7 @@ function create_purchase_invoice(frm) {
     if (!master_towel_costing) missing_fields.push("Master Towel Costing");
     if (!supplier) missing_fields.push("Supplier");
     if (!qty) missing_fields.push("Quantity");
+    if (!scr) missing_fields.push("Subcontracting Order No");
 
     // If there are missing fields, show an error message
     if (missing_fields.length > 0) {
@@ -33,12 +35,13 @@ function create_purchase_invoice(frm) {
         return; // Stop execution if there are missing fields
     } else {
         frappe.call({
-            method: 'garments.garments.doctype.util.create_purchase_invoice.create_purchase_invoice',
+            method: 'garments.garments.doctype.util.create_purchase_receipt.create_purchase_receipt',
             args: {
                 'sco_name': subcontracting_order,
                 'master_towel_costing': master_towel_costing,
                 'supplier': supplier,
-                'qty': qty
+                'qty': qty,
+                'scr': scr
             },
             callback: function (r) {
                 if (!r.exc) {
