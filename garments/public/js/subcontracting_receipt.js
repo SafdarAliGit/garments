@@ -14,7 +14,7 @@ function create_purchase_receipt(frm) {
     let subcontracting_order = frm.doc.items[0].subcontracting_order;
     let master_towel_costing = frm.doc.master_towel_costing;
     let supplier = frm.doc.supplier;
-    let qty = frm.doc.items[0].qty;
+    let qty = frm.doc.total_qty;
     let scr = frm.doc.name;
 
     // Check if any argument is missing
