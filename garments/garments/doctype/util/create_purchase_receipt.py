@@ -12,6 +12,7 @@ def create_purchase_receipt(sco_name, master_towel_costing,supplier, qty,scr):
     doc.master_towel_costing = master_towel_costing
     doc.posting_date = frappe.utils.nowdate()
     doc.posting_time = frappe.utils.nowtime()
+    doc.subcontracting_receipt_no = scr
 
 
     it = doc.append("items", {})
