@@ -14,7 +14,6 @@ function create_purchase_receipt(frm) {
     let subcontracting_order = frm.doc.items[0].subcontracting_order;
     let master_towel_costing = frm.doc.master_towel_costing;
     let supplier = frm.doc.supplier;
-    let qty = frm.doc.total_qty;
     let scr = frm.doc.name;
 
     // Check if any argument is missing
@@ -22,7 +21,6 @@ function create_purchase_receipt(frm) {
     if (!subcontracting_order) missing_fields.push("Subcontracting Order");
     if (!master_towel_costing) missing_fields.push("Master Towel Costing");
     if (!supplier) missing_fields.push("Supplier");
-    if (!qty) missing_fields.push("Quantity");
     if (!scr) missing_fields.push("Subcontracting Order No");
 
     // If there are missing fields, show an error message
@@ -40,7 +38,6 @@ function create_purchase_receipt(frm) {
                 'sco_name': subcontracting_order,
                 'master_towel_costing': master_towel_costing,
                 'supplier': supplier,
-                'qty': qty,
                 'scr': scr
             },
             callback: function (r) {
