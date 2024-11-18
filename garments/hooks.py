@@ -76,8 +76,8 @@ app_license = "MIT"
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
-doctype_js = {"Subcontracting Receipt": "public/js/subcontracting_receipt.js",
-              }
+# doctype_js = {"Subcontracting Receipt": "public/js/subcontracting_receipt.js",
+#               }
 
 # DocType Class
 # ---------------
