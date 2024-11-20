@@ -4,7 +4,7 @@ from frappe.utils import flt
 from erpnext.subcontracting.doctype.subcontracting_order.subcontracting_order import SubcontractingOrder
 
 
-class OverriddenSubcontractingOrder(SubcontractingOrder):
+class 	OverriddenSubcontractingOrder(SubcontractingOrder):
 	def set_missing_values_in_supplied_items(self):
 		for item in self.get("items"):
 			bom = frappe.get_doc("BOM", item.bom)
