@@ -29,7 +29,7 @@ def on_submit(self, method):
         it.description = sco.service_items[0].item_name
         it.amount = float(i.service_cost_per_qty) * float(i.qty)
 
-    doc.submit(ignore_permissions=True)
+    doc.submit()
 
     for item in self.items:
         try:
