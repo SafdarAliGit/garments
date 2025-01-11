@@ -22,6 +22,7 @@ def on_submit(self, method):
         it.master_towel_costing = self.master_towel_costing
         it.rate = i.service_cost_per_qty
         it.qty = i.qty
+        it.color = i.color
         it.item_name = sco.service_items[0].item_name
         it.uom = 'LBS'
         it.stock_uom = 'LBS'
