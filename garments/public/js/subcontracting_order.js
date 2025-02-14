@@ -1,13 +1,13 @@
 frappe.ui.form.on("Subcontracting Order", {
-    refresh: function (frm) {
-        calculate_totals(frm);
-    },
+    // refresh: function (frm) {
+    //     calculate_totals(frm);
+    // },
     on_submit: function (frm) {
         calculate_totals(frm);
     },
-    onload: function (frm) {
-        calculate_totals(frm);
-    }
+    // onload: function (frm) {
+    //     calculate_totals(frm);
+    // }
 
 });
 
